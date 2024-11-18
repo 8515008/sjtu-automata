@@ -88,20 +88,27 @@ def login(url, useocr=False):
         requests login session.
     """
     while True:
+        #echoinfo("test")
         username = input('Username: ')
         password = getpass('Password(no echo): ')
 
         while True:
             session = _create_session()
             req = _get_login_page(session, url)
-            captcha_id = re_search(r'img.src = \'captcha\?(.*)\'', req)
+            #captcha_id = re_search(r'img.src = \'captcha\?(.*)\'', req)
+            captcha_id = re_search(r'captcha\?uuid=(.*?)&t=', req)
+            #echoinfo(captcha_id)
             if not captcha_id:
-                print('Captcha not found! Retrying...')
+                echoinfo('Captcha not found! Retrying...')
                 sleep(3)
                 continue
-            captcha_id += get_timestamp()
-            captcha_url = 'https://jaccount.sjtu.edu.cn/jaccount/captcha?' + captcha_id
+            #captcha_id += get_timestamp()
+            #captcha_url = 'https://jaccount.sjtu.edu.cn/jaccount/captcha?' + captcha_id
+            captcha_url = 'https://jaccount.sjtu.edu.cn/jaccount/captcha?uuid=' + captcha_id + '&t=1726120863879'
+            #echoinfo(captcha_url)
+            
             code = _bypass_captcha(session, captcha_url, useocr)
+            #echoinfo(code)
 
             sid = re_search(r'sid: "(.*?)"', req)
             returl = re_search(r'returl:"(.*?)"', req)
