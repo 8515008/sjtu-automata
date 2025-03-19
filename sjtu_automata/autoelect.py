@@ -1,3 +1,11 @@
+import sys
+import os
+
+# Add the local source code directory to sys.path
+local_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.insert(0, local_path)
+
+# Now import your local modules
 import getopt
 import sys
 from time import sleep
@@ -5,8 +13,6 @@ from time import sleep
 import click
 from click import echo, secho
 import threading
-
-sys.path.append('../')
 
 from sjtu_automata import check_update, echoerror, echoinfo, echowarning
 from sjtu_automata.__version__ import __author__, __url__, __version__
