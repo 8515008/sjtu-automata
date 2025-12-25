@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args":[
+                "--no-update",
+                "--print-cookie",
+                //chooseCourseZzxk('357091E79DD5089EE065F8163EE1DCCC','5788023598b3d243966f811cc5dc944dca3fc2238f28b1e6dd523c7a36d28228b318ca06eb4d51c943b52da863d0ab07f9a88dea43f9cf9df3ad9f5561aea6210230ff94b38f1f0fbb2e14c1f258164ed77e447f52855a77596b0e5a455a05db09efe91e198b4898839b51a587f3398abf8b31c99621aabf2a51e4d4b4f3200f',
+                // 'PE003C22','1')
+                //"kklxdm字段","chooseCourseZzxk第3个参数PE003C22",
+                //"chooseCourseZzxk第2个参数5788023598b3d243966f811c"
+               
+                //
+                "10","0912BF570D57916BE065F8163EE1DCCC",
+                "0d19bc18e639a908266d47d5439651afe5fba847df8eff541e634b8c0751b1e0d260fa1c88d9f0ec67e2df1db359a727b099666d3b925d962ec3b36669b234d20983154fc5969e23c309b76206e6b032829017085150bdd236736855421dc266c7a8e05b3046a7634f5fa94f9fc70952d774df846a8557e89f1242d5add6ccdc"
+            ],
+            "justMyCode": true
+        }
+    ]
+}
